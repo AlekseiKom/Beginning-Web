@@ -1,198 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beginning Web — educational single-page landing template (demo): services, portfolio, feedback and contact form.">
+    <meta name="description" content="Beginning Web — веб-студия полного цикла: дизайн, разработка, SEO и поддержка сайтов. Создаём цифровые продукты, которые приносят результат.">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <title>Beginning Web — веб-студия</title>
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Beginning Project</title>
 </head>
 <body>
-<div class="wrapper" id="top">
-   <header class="header">
-        <div class="logo"><span class="lo">LO</span>
-                          <span class="go">GO</span></div>
-        <nav id='linkList'>
-            <ul class="list1">
-                <li class="headerList"><a href="#top">home</a></li>
-                <li class="headerList"><a href="#about">about</a></li>
-                <li class="headerList"><a href="#aboutService">services</a></li>
-                <li class="headerList"><a href="#portFolio">portfolio</a></li>
-                <li class="headerList"><a href="#web">shop</a></li>
-                <li class="headerList"><a href="#ourConnection">contact</a></li>
-            </ul>
-                <ul class="thumbsList">
-                <li class="headerThumb"><button class="socialHeader" type="button">
-                    <img src="./Sources/images/headerSocialButtons/Web/Facebook.png" alt="Facebook"></button></li>
-                <li class="headerThumb"><button class="socialHeader" type="button">
-                    <img src="./Sources/images/headerSocialButtons/Web/twitterWeb.png" alt="Twitter"></button></li>
-                <li class="headerThumb"><button class="socialHeader" type="button">
-                    <img src="./Sources/images/headerSocialButtons/Web/googleWeb.png" alt="Google"></button></li>
+
+<header class="site-header" id="top">
+    <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Beginning Web — на главную">
+            <span class="logo-mark" aria-hidden="true">B</span>
+            <span class="logo-text">Beginning<span class="accent">Web</span></span>
+        </a>
+
+        <nav class="site-nav" id="siteNav" aria-label="Основная навигация">
+            <ul class="nav-list">
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#process">Процесс</a></li>
+                <li><a href="#portfolio">Кейсы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </nav>
-        <hr class="separateLine">
-        <div class = "text">
-            <h1 class = "header-title">THE BEST SERVICES</h1>
-            <p class ="header-text">We provide the best services in the world.</p>
-            <div class ="borderButton">
-            <button class="button" id='hire' type="button">HIRE US</button>
+
+        <div class="header-actions">
+            <a class="btn btn-primary header-cta" href="#contacts">Обсудить проект</a>
+            <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="siteNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-copy reveal">
+                <p class="badge"><span class="pulse-dot" aria-hidden="true"></span>Веб-студия полного цикла</p>
+                <h1 class="hero-title">Создаём сайты,<br><span class="gradient-text">которые работают на вас</span></h1>
+                <p class="hero-sub">Проектируем, разрабатываем и запускаем цифровые продукты — от лендинга до сложного веб-сервиса. Дизайн, код и поддержка в одной команде.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#contacts">Обсудить проект</a>
+                    <a class="btn btn-ghost" href="#portfolio">Смотреть кейсы</a>
+                </div>
+                <ul class="hero-facts">
+                    <li><strong>120+</strong><span>проектов запущено</span></li>
+                    <li><strong>8 лет</strong><span>на рынке</span></li>
+                    <li><strong>98%</strong><span>клиентов рекомендуют нас</span></li>
+                </ul>
+            </div>
+
+            <div class="hero-art reveal" aria-hidden="true">
+                <svg viewBox="0 0 560 430" role="img" focusable="false">
+                    <defs>
+                        <linearGradient id="gMain" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#6366f1"/>
+                            <stop offset=".55" stop-color="#8b5cf6"/>
+                            <stop offset="1" stop-color="#c084fc"/>
+                        </linearGradient>
+                        <linearGradient id="gSoft" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#6366f1" stop-opacity=".55"/>
+                            <stop offset="1" stop-color="#c084fc" stop-opacity=".25"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- browser window -->
+                    <rect x="40" y="28" width="480" height="336" rx="18" fill="#0d1226" stroke="rgba(148,163,255,.25)"/>
+                    <line x1="40" y1="76" x2="520" y2="76" stroke="rgba(148,163,255,.18)"/>
+                    <circle cx="66" cy="52" r="6" fill="#f87171"/>
+                    <circle cx="88" cy="52" r="6" fill="#fbbf24"/>
+                    <circle cx="110" cy="52" r="6" fill="#34d399"/>
+
+                    <!-- sidebar -->
+                    <rect x="64" y="100" width="88" height="236" rx="10" fill="rgba(148,163,255,.07)"/>
+                    <rect x="78" y="118" width="60" height="9" rx="4.5" fill="url(#gMain)"/>
+                    <rect x="78" y="142" width="48" height="8" rx="4" fill="rgba(148,163,255,.35)"/>
+                    <rect x="78" y="162" width="54" height="8" rx="4" fill="rgba(148,163,255,.22)"/>
+                    <rect x="78" y="182" width="40" height="8" rx="4" fill="rgba(148,163,255,.22)"/>
+
+                    <!-- code lines -->
+                    <rect x="176" y="104" width="190" height="12" rx="6" fill="url(#gMain)"/>
+                    <rect x="176" y="132" width="280" height="9" rx="4.5" fill="rgba(148,163,255,.35)"/>
+                    <rect x="176" y="152" width="240" height="9" rx="4.5" fill="rgba(148,163,255,.25)"/>
+                    <rect x="176" y="172" width="264" height="9" rx="4.5" fill="rgba(148,163,255,.30)"/>
+                    <rect x="176" y="192" width="180" height="9" rx="4.5" fill="url(#gSoft)"/>
+
+                    <!-- chart card -->
+                    <rect x="330" y="222" width="166" height="96" rx="12" fill="#11173a" stroke="rgba(148,163,255,.2)"/>
+                    <rect x="348" y="240" width="70" height="8" rx="4" fill="rgba(148,163,255,.4)"/>
+                    <rect x="352" y="288" width="16" height="18" rx="4" fill="#6366f1"/>
+                    <rect x="376" y="276" width="16" height="30" rx="4" fill="#8b5cf6"/>
+                    <rect x="400" y="264" width="16" height="42" rx="4" fill="#a855f7"/>
+                    <rect x="424" y="252" width="16" height="54" rx="4" fill="#c084fc"/>
+
+                    <!-- floating: lighthouse badge -->
+                    <g>
+                        <rect x="398" y="-6" width="132" height="52" rx="14" fill="#11173a" stroke="rgba(148,163,255,.25)"/>
+                        <circle cx="424" cy="20" r="13" fill="url(#gMain)"/>
+                        <path d="M418 20l4.5 4.5L431 15" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="446" y="12" width="66" height="7" rx="3.5" fill="rgba(148,163,255,.5)"/>
+                        <rect x="446" y="26" width="44" height="6" rx="3" fill="rgba(148,163,255,.28)"/>
+                    </g>
+
+                    <!-- floating: cursor -->
+                    <path d="M196 300l14 34 5-13 13-5z" fill="#c084fc" stroke="#0d1226" stroke-width="2"/>
+
+                    <!-- floating: deploy pill -->
+                    <g>
+                        <rect x="-14" y="330" width="150" height="46" rx="14" fill="#11173a" stroke="rgba(148,163,255,.25)"/>
+                        <circle cx="14" cy="353" r="9" fill="#34d399"/>
+                        <path d="M10 353l3 3 6-6" stroke="#07101f" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="34" y="344" width="84" height="7" rx="3.5" fill="rgba(148,163,255,.5)"/>
+                        <rect x="34" y="358" width="56" height="6" rx="3" fill="rgba(148,163,255,.28)"/>
+                    </g>
+                </svg>
             </div>
         </div>
-    </header>
-     <article class="mainInform" id="about">
-         <div class="writing">
-          <!-- image writing-->
-         </div>
-        <div class="aboutUs">
-        <h2 class="aboutUsTitle">A LITTLE ABOUT US</h2>
-        <hr class="aboutUsLine">
-        <p class="mainText">
-            We are a company based in India with the motto
-          “Digitalally Designed India”.
-        </p>
-        <button class="details" type="button">READ MORE DETAILS</button>
+    </section>
+    <!-- MARQUEE -->
+    <section class="marquee-section" aria-label="Технологии, с которыми мы работаем">
+        <div class="marquee">
+            <ul class="marquee-track">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Node.js</li><li>Figma</li><li>PostgreSQL</li><li>Docker</li><li>Vite</li>
+                <li aria-hidden="true">HTML5</li><li aria-hidden="true">CSS3</li><li aria-hidden="true">JavaScript</li><li aria-hidden="true">TypeScript</li><li aria-hidden="true">React</li><li aria-hidden="true">Node.js</li><li aria-hidden="true">Figma</li><li aria-hidden="true">PostgreSQL</li><li aria-hidden="true">Docker</li><li aria-hidden="true">Vite</li>
+            </ul>
         </div>
-    </article>
+    </section>
 
-     <article class="servicesFedback" id="aboutService">
-         <h2 class="servicesTitle"> OUR SERVICES
-         </h2>
-         <section class="webDevelopment" id='web'>
-             <ul class="webList">
-                 <li class="webFrame" id='web1'>
-                     <p class="webPic"></p>
-                     <h3 class="web">WEB DEVELOPMENT</h3>
-                     <p class="webInform">We provide the best world class web development service.</p>
-                     <button class="webTouch" type="button">MORE DETAILS</button>
-                 </li>
-                  <li class="webFrame" id='web2'>
-                     <p class="webPic"></p>
-                     <h3 class="web">WEB DEVELOPMENT</h3>
-                     <p class="webInform">We provide the best world class web development service.</p>
-                     <button class="webTouch" type="button">MORE DETAILS</button>
-                 </li>
-                 <li class="webFrame" id='web3'>
-                     <p class="webPic"></p>
-                     <h3 class="web">WEB DEVELOPMENT</h3>
-                     <p class="webInform">We provide the best world class web development service.</p>
-                     <button class="webTouch" type="button">MORE DETAILS</button>
-                 </li>
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <header class="section-head reveal">
+                <p class="eyebrow">Услуги</p>
+                <h2>Всё, что нужно вашему продукту</h2>
+                <p class="section-sub">Берём проект под ключ: от идеи и аналитики до запуска, SEO и дальнейшей поддержки.</p>
+            </header>
 
-             </ul>
-         </section>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+                    <h3>Веб-разработка</h3>
+                    <p>Скоростные сайты и веб-приложения на современном стеке — от вёрстки до интеграций с вашими сервисами.</p>
+                </article>
 
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span>
+                    <h3>UI/UX-дизайн</h3>
+                    <p>Интерфейсы, понятные с первого взгляда: прототипы, макеты и дизайн-системы для ваших продуктов.</p>
+                </article>
 
-         <section class="feedback">
-         <h2 class="servicesTitle">FEEDBACK
-         </h2>
-            <div class="feedbackSlider">
-              <div class="slideShow">
-                 <p class="sliderText">
-                     It was always a pleasure<br>
-                     doing business with them.<br>
-                     I love the quality of work.
-                 </p>
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+                    <h3>Адаптивность</h3>
+                    <p>Идеальная картинка на любом экране: от смартфона до 4K-монитора, во всех современных браузерах.</p>
+                </article>
 
-                 <hr class="sliderLine">
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+                    <h3>SEO и продвижение</h3>
+                    <p>Выводим сайт в топ поисковиков, настраиваем аналитику и растим органический трафик.</p>
+                </article>
 
-                 <div class="buttonSlide">
-                      <button class="SliderLeft" type="button" aria-label="Previous slide"></button>
-                      <button class="SliderRight" type="button" aria-label="Next slide"></button>
-                 </div>
-              </div>
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+                    <h3>Поддержка и развитие</h3>
+                    <p>Мониторинг, обновления безопасности и новые фичи — ваш сайт живёт и развивается после запуска.</p>
+                </article>
 
-              <div class="people" id='portFolio'>
-                 <div class="person1"><p class="slideNumber">01</p>
-                     <p class="slideDescription">John Wick<br>CEO, Vesso</p></div>
-                 <div class="person2"><p class="slideNumber">02</p>
-                     <p class="slideDescription">Jenny Rain<br>CEO, Vesso</p></div>
-                 <div class="person3"><p class="slideNumber">03</p>
-                     <p class="slideDescription">Imran Khan<br>CEO, Vesso</p></div>
-              </div>
+                <article class="service-card reveal">
+                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+                    <h3>Интеграции и API</h3>
+                    <p>CRM, платёжные системы, аналитика и мессенджеры — связываем всё в единую экосистему.</p>
+                </article>
             </div>
-         </section>
-
-         <section class="clients">
-         <h2 class="clientsTitle">CLIENTS</h2>
-             <div class="clientsLogo">
-                 <p class="logoPic logoPic1"></p>
-                 <p class="logoPic logoPic2"></p>
-                 <p class="logoPic logoPic3"></p>
-                 <p class="logoPic logoPic4"></p>
-                 <p class="logoPic logoPic5"></p>
-                 <p class="logoPic logoPic6"></p>
-                 <p class="logoPic logoPic7"></p>
-                 <p class="logoPic logoPic8"></p>
-             </div>
-         </section>
-
-         <section class="queries">
-             <div class="queriesText">
-                 <h3 class="queriesTitle">Any Queries | Get a quote</h3>
-                 <p class="queriesInf">
-                If you have any questions or queries regarding
-                our service or pricing don’t worry.<br>
-                Our experts will call you.</p>
-             </div>
-
-             <div class="formCall">
-             <form class="getCall" action="#" method="post">
-      <label for="name" class="visually-hidden">Your name</label>
-      <input id="name" class="name" type="text" placeholder="Your name" required />
-      <label for="phone" class="visually-hidden">Your number</label>
-      <input id="phone" class="number" type="tel" placeholder="Your number" required />
-      <input class="call" type="submit" value="Get a Call" />
-             </form>
-             </div>
-         </section>
-     </article>
-     <footer>
-        <div class="footerMenu">
-         <ul class="footerList">
-            <li>PRODUCT</li>
-            <li>Cost &amp; Governance</li>
-            <li>Security &amp; Compliance</li>
-            <li>Pricing &amp; plans</li>
-         </ul>
-            <ul class="footerList">
-             <li>LEARN</li>
-             <li>Articles</li>
-             <li>Register a demo</li>
-             <li>Webinars</li>
-             <li>FAQs</li>
-         </ul>
-            <ul class="footerList">
-             <li>COMPANY</li>
-             <li>About</li>
-             <li>Careers</li>
-             <li>Partners</li>
-             <li>Contacts</li>
-         </ul>
         </div>
-         <div class="emailFotter">
-             <form class="emailBottom" action="#" method="post">
-      <label for="email" class="visually-hidden">Your email</label>
-      <input id="email" class="name" type="email" placeholder="Your email" required />
-      <input class="call" type="submit" value="Subscribe" />
-             </form>
+    </section>
+    <!-- PROCESS -->
+    <section id="process" class="section process-section">
+        <div class="container">
+            <header class="section-head reveal">
+                <p class="eyebrow">Процесс</p>
+                <h2>Как мы работаем</h2>
+                <p class="section-sub">Прозрачный процесс без сюрпризов: вы всегда знаете, на каком этапе проект и что будет дальше.</p>
+            </header>
 
-         <div class="footerSocials" id='ourConnection'>
-             <ul>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/facebookWeb.png" alt="Facebook"></li>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/twitterWeb.png" alt="Twitter"></li>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/google.png" alt="Google"></li>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/worldWeb.png" alt="Website"></li>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/beherWeb.png" alt="Behance"></li>
-                 <li class="socialThumb"><img src="./Sources/images/social-footer/FOrWEB/instWEB.png" alt="Instagram"></li>
-             </ul>
-         </div>
-       </div>
-     </footer>
-</div>
+            <ol class="process-grid">
+                <li class="step reveal"><span class="step-num" aria-hidden="true">01</span><h3>Бриф и аналитика</h3><p>Погружаемся в ваш бизнес, изучаем аудиторию и конкурентов, фиксируем цели проекта.</p></li>
+                <li class="step reveal"><span class="step-num" aria-hidden="true">02</span><h3>Дизайн и прототип</h3><p>Проектируем структуру и интерфейс: от кликабельного прототипа до готовой дизайн-системы.</p></li>
+                <li class="step reveal"><span class="step-num" aria-hidden="true">03</span><h3>Разработка</h3><p>Пишем чистый код, тестируем на реальных устройствах и оптимизируем скорость загрузки.</p></li>
+                <li class="step reveal"><span class="step-num" aria-hidden="true">04</span><h3>Запуск и поддержка</h3><p>Выводим сайт в продакшн, подключаем аналитику и остаёмся рядом для развития продукта.</p></li>
+            </ol>
+        </div>
+    </section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <header class="section-head reveal">
+                <p class="eyebrow">Кейсы</p>
+                <h2>Проекты, которыми гордимся</h2>
+                <p class="section-sub">Небольшая выборка из 120+ запущенных проектов. Полное портфолио покажем на встрече.</p>
+            </header>
+
+            <div class="portfolio-grid">
+                <article class="case-card reveal">
+                    <div class="case-cover" aria-hidden="true">
+                        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312e81"/><stop offset=".6" stop-color="#4f46e5"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+                            </defs>
+                            <rect width="400" height="260" fill="url(#c1)"/>
+                            <circle cx="330" cy="40" r="90" fill="rgba(255,255,255,.08)"/>
+                            <circle cx="60" cy="230" r="70" fill="rgba(192,132,252,.18)"/>
+                            <rect x="48" y="86" width="200" height="16" rx="8" fill="rgba(255,255,255,.85)"/>
+                            <rect x="48" y="118" width="260" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+                            <rect x="48" y="140" width="220" height="10" rx="5" fill="rgba(255,255,255,.25)"/>
+                            <rect x="48" y="176" width="96" height="30" rx="15" fill="#c084fc"/>
+                        </svg>
+                    </div>
+                    <div class="case-body">
+                        <ul class="tags"><li>Финтех</li><li>React</li><li>Дизайн-система</li></ul>
+                        <h3>Aurora Finance — интернет-банк</h3>
+                        <p>Платформа онлайн-банкинга: личный кабинет, платежи и аналитика в одном интерфейсе.</p>
+                        <p class="case-result"><strong>+38%</strong><span>конверсия в регистрацию после редизайна</span></p>
+                    </div>
+                </article>
+
+                <article class="case-card reveal">
+                    <div class="case-cover" aria-hidden="true">
+                        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="c2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset=".55" stop-color="#6d28d9"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+                            </defs>
+                            <rect width="400" height="260" fill="url(#c2)"/>
+                            <path d="M0 190 C 90 130, 150 230, 240 170 S 380 120, 400 150 L 400 260 L 0 260 Z" fill="rgba(255,255,255,.10)"/>
+                            <circle cx="90" cy="70" r="34" fill="rgba(255,255,255,.18)"/>
+                            <rect x="48" y="60" width="180" height="16" rx="8" fill="rgba(255,255,255,.85)"/>
+                            <rect x="48" y="92" width="240" height="10" rx="5" fill="rgba(255,255,255,.35)"/>
+                            <rect x="48" y="114" width="200" height="10" rx="5" fill="rgba(255,255,255,.25)"/>
+                        </svg>
+                    </div>
+                    <div class="case-body">
+                        <ul class="tags"><li>Туризм</li><li>Онлайн-бронирование</li></ul>
+                        <h3>Nordwind Travel — сервис путешествий</h3>
+                        <p>Каталог туров с онлайн-бронированием, личным кабинетом и интеграцией платёжных систем.</p>
+                        <p class="case-result"><strong>×2.4</strong><span>рост прямых продаж за полгода</span></p>
+                    </div>
+                </article>
+
+                <article class="case-card reveal">
+                    <div class="case-cover" aria-hidden="true">
+                        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="c3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3730a3"/><stop offset=".6" stop-color="#8b5cf6"/><stop offset="1" stop-color="#e879f9"/></linearGradient>
+                            </defs>
+                            <rect width="400" height="260" fill="url(#c3)"/>
+                            <circle cx="320" cy="200" r="110" fill="rgba(255,255,255,.08)"/>
+                            <rect x="48" y="70" width="120" height="120" rx="16" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.3)"/>
+                            <rect x="188" y="70" width="120" height="120" rx="16" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.3)"/>
+                            <rect x="48" y="208" width="260" height="10" rx="5" fill="rgba(255,255,255,.3)"/>
+                        </svg>
+                    </div>
+                    <div class="case-body">
+                        <ul class="tags"><li>E-commerce</li><li>Редизайн</li></ul>
+                        <h3>Craft &amp; Co. — магазин крафтовых брендов</h3>
+                        <p>Интернет-магазин с каталогом, корзиной и быстрой оплатой для сети локальных производителей.</p>
+                        <p class="case-result"><strong>+57%</strong><span>средний чек после редизайна витрины</span></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="container stats-panel reveal">
+            <div class="stat"><span class="stat-num" data-count="120" data-suffix="+">0</span><p>проектов запущено</p></div>
+            <div class="stat"><span class="stat-num" data-count="8">0</span><p>лет на рынке</p></div>
+            <div class="stat"><span class="stat-num" data-count="98" data-suffix="%">0</span><p>клиентов рекомендуют нас</p></div>
+            <div class="stat"><span class="stat-num" data-count="45">0</span><p>дней — средний срок запуска</p></div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <header class="section-head reveal">
+                <p class="eyebrow">Отзывы</p>
+                <h2>Что говорят клиенты</h2>
+                <p class="section-sub">Нам доверяют стартапы, средний бизнес и крупные бренды. Вот несколько слов от тех, с кем мы уже работали.</p>
+            </header>
+
+            <div class="reviews-grid">
+                <figure class="review-card reveal">
+                    <blockquote>«Команда Beginning Web переделала наш сайт за шесть недель — без срыва сроков и лишних согласований. Конверсия выросла заметно уже в первый месяц».</blockquote>
+                    <figcaption>
+                        <span class="avatar" aria-hidden="true">АС</span>
+                        <div><strong>Анна Соколова</strong><span>Product Manager, Aurora Finance</span></div>
+                    </figcaption>
+                </figure>
+
+                <figure class="review-card reveal">
+                    <blockquote>«Редко встречаешь команду, которая одинаково хорошо говорит и на языке дизайна, и на языке бизнеса. Рекомендую как надёжного партнёра».</blockquote>
+                    <figcaption>
+                        <span class="avatar" aria-hidden="true">ДК</span>
+                        <div><strong>Дмитрий Ковалёв</strong><span>Основатель, Nordwind Travel</span></div>
+                    </figcaption>
+                </figure>
+
+                <figure class="review-card reveal">
+                    <blockquote>«После запуска магазин стал приносить вдвое больше заявок. Отдельное спасибо за поддержку: отвечают быстро и по делу».</blockquote>
+                    <figcaption>
+                        <span class="avatar" aria-hidden="true">МЛ</span>
+                        <div><strong>Мария Лебедева</strong><span>Директор по маркетингу, Craft &amp; Co.</span></div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-panel reveal">
+                <h2>Готовы начать проект?</h2>
+                <p>Расскажите о задаче — за один день подготовим план работ и смету без обязательств.</p>
+                <a class="btn btn-light" href="#contacts">Получить расчёт</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contacts" class="section contacts-section">
+        <div class="container contacts-inner">
+            <div class="contacts-info reveal">
+                <p class="eyebrow">Контакты</p>
+                <h2>Обсудим ваш проект</h2>
+                <p class="section-sub">Напишите нам — ответим в течение рабочего дня и предложим, с чего начать.</p>
+
+                <ul class="contact-list">
+                    <li><a href="mailto:hello@beginningweb.ru"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></span>hello@beginningweb.ru</a></li>
+                    <li><a href="tel:+79001234567"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.23a2 2 0 0 1 2.11-.45c.91.31 1.85.53 2.81.66A2 2 0 0 1 22 16.92z"/></svg></span>+7 (900) 123-45-67</a></li>
+                    <li><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Москва, ул. Тверская, 7</li>
+                </ul>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm" novalidate>
+                <h3>Оставить заявку</h3>
+                <label for="cf-name">Ваше имя</label>
+                <input type="text" id="cf-name" name="name" placeholder="Как к вам обращаться?" required autocomplete="name">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required autocomplete="email">
+                <label for="cf-message">О проекте</label>
+                <textarea id="cf-message" name="message" rows="4" placeholder="Пара слов о задаче: что за сайт, какие цели, сроки…" required></textarea>
+                <button class="btn btn-primary form-submit" type="submit">Отправить заявку</button>
+                <p class="form-note" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <a class="logo" href="#top" aria-label="Beginning Web — на главную">
+            <span class="logo-mark" aria-hidden="true">B</span>
+            <span class="logo-text">Beginning<span class="accent">Web</span></span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#process">Процесс</a></li>
+                <li><a href="#portfolio">Кейсы</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-socials" aria-label="Мы в соцсетях">
+            <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.04 15.51l-.38 5.36c.54 0 .78-.23 1.06-.5l2.51-2.39 5.22 3.8c.96.53 1.65.25 1.89-.88l3.37-15.84c.29-1.34-.51-1.88-1.42-1.54L1.6 10.1c-1.3.5-1.28 1.24-.22 1.57l5.13 1.6 11.9-7.48c.53-.34 1.02-.15.62.28L9.04 15.51z"/></svg></a>
+            <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.75 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+            <a href="mailto:hello@beginningweb.ru" aria-label="Написать на почту"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg></a>
+        </div>
+
+        <p class="footer-copy">© <span id="year">2026</span> Beginning Web. Все права защищены.</p>
+    </div>
+</footer>
+
 <script src="./JS/JS.js"></script>
-
 </body>
 </html>
