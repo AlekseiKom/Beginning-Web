@@ -6,13 +6,13 @@ body{
     background: #686868;
 }
 /* HEADER BANNER */ 
-.header { 
-margin :0 auto;   
-max-width: 1000px;
-background-image:
-url("../Sources/images/header/banner-header.png");
-width: 1000px;
-height: 552px; 
+.header {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    aspect-ratio: 1000 / 552;
+    background-image: url("../Sources/images/header/banner-header.png");
+    background-size: cover;
 }
 .logo {
 margin-top: 0;
@@ -224,7 +224,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     background-image:
-url("../Sources/images/Web%20development/Web-Development.png");
+url("../Sources/images/web-development/Web-Development.png");
     background-repeat: no-repeat;
     width: 128px;
     height:128px;
@@ -275,9 +275,12 @@ url("../Sources/images/Web%20development/Web-Development.png");
     width: 320px;
 }
 .people {
-    
-    width: 650px; 
+    width: 100%;
+    max-width: 650px;
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .slideShow, .people {
     display: inline-block;
@@ -327,19 +330,17 @@ url("../Sources/images/Web%20development/Web-Development.png");
     background-repeat: no-repeat;
 }
 .person2 {
-    margin-left: 20px;
     background-image: url("../Sources/images/SliderPeople/redheadWEB.png");
     width: 200px;
     height: 220px;
     background-repeat: no-repeat;
 }
-.person3 {  
-    margin-left: 20px;
+.person3 {
     background-image: url("../Sources/images/SliderPeople/ImranKhanWEB.png");
     width: 200px;
     height: 220px;
     background-repeat: no-repeat;
-}  
+}
 .person1, .person2, .person3 {
     display: inline-block;
     cursor: pointer;
@@ -417,16 +418,17 @@ url("../Sources/images/Web%20development/Web-Development.png");
 } 
 
 
-.cleentsLogo {
-   width: 1000px;
-   height: 450px; 
-   background-color: #fff;  
+.clientsLogo {
+    width: 1000px;
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
 }
-.linelogo  {
-    width: 995px;
-    height: 215px;
-}
-.cellLogo {
+.logoPic {
+    width: 220px;
+    height: 210px;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 .logoPic1 {
@@ -590,4 +592,123 @@ footer {
  flex-direction: row;
  justify-content : space-around;
  align-items: stretch;
+}
+
+/* ACCESSIBILITY */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .header-title {
+        margin-top: 40px;
+        font-size: 32px;
+    }
+    nav {
+        margin-left: 0;
+    }
+    .list1, .thumbsList {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    li {
+        margin-left: 12px;
+    }
+    .mainInform {
+        height: auto;
+    }
+    .writing, .aboutUs {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .writing {
+        aspect-ratio: 500 / 426;
+        background-size: 100% 100%;
+    }
+    .aboutUs {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .servicesTitle, .clientsTitle {
+        width: 100%;
+    }
+    .webFrame {
+        max-width: none;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    .feedbackSlider {
+        width: 100%;
+        height: auto;
+    }
+    .slideShow {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .people {
+        justify-content: center;
+    }
+    .clientsLogo {
+        width: 100%;
+        height: auto;
+    }
+    .queries {
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .queriesText {
+        width: 100%;
+    }
+    .formCall {
+        position: static;
+        width: 100%;
+    }
+    .getCall {
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    footer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .footerMenu, .emailFotter {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-title {
+        font-size: 26px;
+    }
+    li {
+        margin-left: 8px;
+    }
+    .webPic {
+        margin-top: 30px;
+    }
+    .sliderText {
+        padding-top: 30px;
+    }
+    .name, .number {
+        width: 140px;
+    }
 }

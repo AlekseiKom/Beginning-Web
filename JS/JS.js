@@ -1,21 +1,10 @@
-
-
-
-$(document).ready(function(){
-    $("#linkList").on("click","a", function (event) {
-    event.preventDefault();
-    var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
-     });
-     });
-
-    /*  $(document).ready(function() {
-        var freqSecs = 1.2;
-        setInterval (blink, freqSecs*1000 );
-       
-        function blink() {
-         var inout = (freqSecs*1000)/0.5;
-         $("#hire").fadeIn(inout).fadeOut(inout);
-        }
-       });    */
+$(document).ready(function () {
+    $("#linkList").on("click", "a", function (event) {
+        var id = $(this).attr('href');
+        if (!id || id.charAt(0) !== '#') return;
+        var target = $(id);
+        if (!target.length) return;
+        event.preventDefault();
+        $('body,html').animate({ scrollTop: target.offset().top }, 1500);
+    });
+});
