@@ -89,9 +89,8 @@ a:hover {text-decoration: underline;}
     background-color: inherit;
 }
 .button{
-    animation: rainbow 2s linear 2s;
-    animation-duration: 2500;
-   }
+    animation: rainbow 2.5s linear 2s;
+}
    @keyframes rainbow {
        0% {background: #d213f8;}
        50% {background: #337ae6a1}
@@ -278,11 +277,11 @@ url("../Sources/images/web-development/Web-Development.png");
     width: 100%;
     max-width: 650px;
     margin-top: 30px;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-.slideShow, .people {
+.slideShow {
     display: inline-block;
 }
 .sliderLine {
@@ -609,6 +608,9 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+    .header {
+        aspect-ratio: auto;
+    }
     .header-title {
         margin-top: 40px;
         font-size: 32px;
@@ -645,9 +647,15 @@ footer {
         width: 100%;
     }
     .webFrame {
+        display: block;
         max-width: none;
         height: auto;
         margin-bottom: 30px;
+    }
+    .webTouch {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .feedbackSlider {
         width: 100%;
@@ -659,6 +667,11 @@ footer {
         text-align: center;
     }
     .people {
+        display: flex;
+        width: auto;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
         justify-content: center;
     }
     .clientsLogo {
